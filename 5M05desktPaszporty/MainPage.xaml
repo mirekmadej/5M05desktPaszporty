@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_5M05desktPaszporty.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25"
+            BackgroundColor="CadetBlue">
+
+            <HorizontalStackLayout Spacing="10">
+                <VerticalStackLayout>
+                    <HorizontalStackLayout Margin="10" VerticalOptions="Center">
+                        <Label Text="Numer" WidthRequest="100" />
+                        <Entry x:Name="entNumer" 
+                               WidthRequest="200" 
+                               BackgroundColor="Azure" 
+                               Unfocused="entNrUnfocused"
+                               />
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout Margin="10" VerticalOptions="Center">
+                        <Label Text="Naziwsko" WidthRequest="100" />
+                        <Entry x:Name="entNaziwsko" WidthRequest="200" BackgroundColor="Azure" />
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout Margin="10" VerticalOptions="Center">
+                        <Label Text="Imię" WidthRequest="100" />
+                        <Entry x:Name="entImie" WidthRequest="200" BackgroundColor="Azure" />
+                    </HorizontalStackLayout>
+                    <StackLayout>
+                        <Label Text="Kolor oczu"
+                               Margin="10,0,0,-10"
+                               ZIndex="1"
+                               WidthRequest="100"
+                               HorizontalOptions="Start"
+                               BackgroundColor="CadetBlue"
+                               />
+                        <Frame 
+                            BackgroundColor="CadetBlue"
+                            BorderColor="White"
+                            >
+                            <StackLayout>
+                                <RadioButton
+                                    Content="niebieski"
+                                    x:Name="rbtNiebieskie"
+                                    IsChecked="True"
+                                    />
+                                <RadioButton
+                                    Content="zielone"
+                                    x:Name="rbtZielone"
+                                    />
+                                    <RadioButton
+                                    Content="piwne"
+                                    x:Name="rbtPiwne"
+                                    />
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </VerticalStackLayout>
+                <VerticalStackLayout>
+                    <HorizontalStackLayout Spacing="20" Margin="10">
+                        <Image
+                            Source="z000_zdjecie.png"
+                            x:Name="imgZdjecie"
+                            HeightRequest="280"
+                            />
+                        <Image
+                            Source="z000_odcisk.png"
+                            x:Name="imgOdcisk"
+                            HeightRequest="280"
+                            />
+                    </HorizontalStackLayout>
+                    <Button
+                        Text="OK"
+                        TextColor="Black"
+                        WidthRequest="250"
+                        Clicked="btnOK"
+                        Margin="0, 50, 0 , 0"
+                        BackgroundColor="Azure" 
+                        />
+                </VerticalStackLayout>
+                
+            </HorizontalStackLayout>
+            
+            
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
